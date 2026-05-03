@@ -3,7 +3,7 @@ import sys
 import os
 
 # Installed Modules
-import pytest
+
 
 # Project Modules
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
@@ -68,3 +68,7 @@ def test_get_nth_fibonacci_ten():
 
     # Assert
     assert result == 55
+
+def test_get_nth_fibonacci_zero():
+    result = get_nth_fibonacci(0)
+    assert result == 0
